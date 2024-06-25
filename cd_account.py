@@ -1,5 +1,5 @@
 """Import the Account class from the Account.py file."""
-import Account from Account
+from Account import Account
 
 def create_cd_account(balance, interest_rate, months):
     """Creates a CD account, calculates interest earned, and updates the account balance.
@@ -19,17 +19,15 @@ def create_cd_account(balance, interest_rate, months):
     
 
     # Calculate interest earned
-    interest_earned = balance * (interest_rate /12) * months
+    interest_earned = balance * (interest_rate/100 * months/12)
 
     # Update the CD account balance by adding the interest earned
     new_balance = balance + interest_earned
 
     # Pass the updated_balance to the set balance method using the instance of the CDAccount class.
-    cd_account.set_balance(new_balance)
-    cd_account.set_interest(interest_earned)    
+    cd_account.set_balance(new_balance)  
 
     # Pass the interest_earned to the set interest method using the instance of the CDAccount class.
-    # ADD YOUR CODE HERE
-    return set_interest(interest_earned)
+    cd_account.set_interest(interest_earned)
     # Return the updated balance and interest earned.
     return  new_balance, interest_earned

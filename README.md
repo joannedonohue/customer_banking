@@ -1,6 +1,5 @@
 # customer_banking
 
-Here are some examples of pseudocode for the ATM user stories:
 
   * As a user of an ATM, I: **input my PIN for identification.**
 
